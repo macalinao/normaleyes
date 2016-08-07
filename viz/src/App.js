@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Sidebar />
+        <Sidebar interviews={model.interviews} candidates={model.candidates} />
         <div className="App-container">
           <InterviewHeader interviewee={model.interviewee} />
           <div className="App-containerContents">
