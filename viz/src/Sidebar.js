@@ -21,7 +21,7 @@ export default ({ interviews, candidates }) => (
     <h2>Related Candidates</h2>
     <ul>
       {
-        candidates.map((candidate) =>
+        candidates.map(x => x.interviewee).map((candidate) =>
           <li>
             <h3>{ candidate.name }</h3>
             <h4>{ candidate.role }</h4>

@@ -6,7 +6,7 @@ import Video from './Video';
 import InterviewRadar from './InterviewRadar';
 import Sentiment from './Sentiment';
 
-import model from './model';
+import candidates from './candidates';
 
 const getEvent = (events, time) => {
   return events.length - 1 - events.slice().reverse().findIndex((e) => time >= e.time);
@@ -30,46 +30,68 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      candidateId: 0,
+      interviewId: 0
+    };
   }
 
   onSeek(time) {
-    const ev = getEvent(model.events, time);
+    const i = this.currentInterview();
+    const ev = getEvent(i.events, time);
     this.setState({
       currentEvent: ev,
     });
   }
 
   onTranscriptSelect(index) {
+    const i = this.currentInterview();
     const el = document.getElementById('theVideo');
     if (el) {
-      el.currentTime = model.events[index].time;
+      el.currentTime = i.events[index].time;
     }
   }
 
+  currentCandidate() {
+    const { candidateId } =  this.state;
+    return candidates[candidateId];
+  }
+
+  currentInterview() {
+    const { candidateId, interviewId } =  this.state;
+    return candidates[candidateId].interviews[interviewId];
+  }
+
   render() {
+    const c = this.currentCandidate();
+    const i = this.currentInterview();
+
     return (
       <div className="App">
-        <Sidebar interviews={model.interviews} candidates={model.candidates} />
+        <Sidebar interviews={c.interviews} candidates={candidates} />
+
         <div className="App-container">
-          <InterviewHeader interviewee={model.interviewee} />
+          <InterviewHeader interviewee={c.interviewee} />
+
           <div className="App-containerContents">
             <div className="App-main">
               <Video onSeek={this.onSeek.bind(this)} />
 
               <div className="App-details">
+
                 <div className="App-radar">
                   <h3>Overall Attributes</h3>
-                  <InterviewRadar overallStats={model.stats} />
+                  <InterviewRadar overallStats={i.stats} />
                 </div>
+
                 <div className="App-info">
 
                   <h3>Info</h3>
                   <ul>
-                    <li><strong>Name: </strong>{ model.interviewee.name }</li>
-                    <li><strong>Email: </strong>{ model.interviewee.email }</li>
-                    <li><strong>Phone: </strong>{ model.interviewee.phone }</li>
-                    <li><strong>Interviewed By: </strong>{ model.interviewer.name }</li>
+                    <li><strong>Name: </strong>{ c.interviewee.name }</li>
+                    <li><strong>Email: </strong>{ c.interviewee.email }</li>
+                    <li><strong>Phone: </strong>{ c.interviewee.phone }</li>
+                    <li><strong>Interviewed By: </strong>{ i.interviewer }</li>
                   </ul>
 
                   <h3>Hiring Decision</h3>
@@ -89,10 +111,10 @@ class App extends Component {
             <div className="App-live">
 
               <h3>Live Sentiment</h3>
-              <Sentiment event={model.events[this.state.currentEvent]} />
+              <Sentiment event={i.events[this.state.currentEvent]} />
 
               <h3>Transcript</h3>
-              <Transcript events={model.events} currentEvent={this.state.currentEvent} onTranscriptSelect={this.onTranscriptSelect.bind(this)} />
+              <Transcript events={i.events} currentEvent={this.state.currentEvent} onTranscriptSelect={this.onTranscriptSelect.bind(this)} />
 
             </div>
 

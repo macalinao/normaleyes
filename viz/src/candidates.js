@@ -400,52 +400,85 @@ const stephanieTime = [
     },
 ];
 
-export default {
-  interviewer: {
-    name: 'Christina Huang'
+const christinaStats = {
+  openness: 0.10,
+  conscientiousness: 0.37,
+  extraversion: 0.29,
+  agreeableness: 0.82,
+  neuroticism: 0.96,
+  team: 0.15
+};
+
+const stephanieStats = {
+  openness: 0.08,
+  conscientiousness: 0.20,
+  extraversion: 0.70,
+  agreeableness: 0.91,
+  neuroticism: 0.94,
+  team: 0.44
+};
+
+const candidates = [
+
+  {
+    interviews: [
+      {
+        type: 'Behavioral',
+        interviewer: 'Christina Huang',
+        selected: true,
+        stats: stephanieStats,
+        events: stephanieTime,
+      },
+      {
+        type: 'Distributed Systems',
+        interviewer: 'Jeff Dean',
+      },
+      {
+        type: 'Algorithms',
+        interviewer: 'Sanjay Gupta',
+      },
+    ],
+    interviewee: {
+      name: 'Stephanie Li',
+      role: 'Product Management Candidate',
+      phone: '(429) 496-7295',
+      email: 'me@stephanieli.net'
+    },
   },
-  interviewee: {
-    name: 'Ian Macalinao',
-    role: 'Software Engineering Candidate',
-    phone: '(530) 426-2146',
-    email: 'me@ian.pw'
+
+  {
+    interviews: [
+      {
+        type: 'Behavioral',
+        interviewer: 'Stephanie Li',
+        selected: true,
+        stats: christinaStats,
+        events: christinaTime
+      },
+      {
+        type: 'Distributed Systems',
+        interviewer: 'Jeff Dean',
+      },
+      {
+        type: 'Algorithms',
+        interviewer: 'Sanjay Gupta',
+      },
+    ],
+    interviewee: {
+      name: 'Christina Huang',
+      role: 'Software Engineering Candidate',
+      phone: '(214) 748-3647',
+      email: 'christina@huang.me'
+    },
   },
-  events: stephanieTime,
-  interviews: [
-    {
-      type: 'Distributed Systems',
-      interviewer: 'Christina Huang',
-      selected: true,
-    },
-    {
-      type: 'Algorithms',
-      interviewer: 'Jeff Dean',
-    },
-    {
-      type: 'Algorithms',
-      interviewer: 'Sanjay Gupta',
-    },
-  ],
-  candidates: [
-    {
-      name: 'Donald Trump',
-      role: 'Presidential Candidate',
-    },
-    {
-      name: 'Hillary Clinton',
-      role: 'Director of HR',
-    },
-    {
+
+  {
+    interviewee: {
       name: 'Bob Marley',
       role: 'Peace Warrior',
-    },
-  ],
-  stats: {
-    openness: 50,
-    conscientiousness: 80,
-    extraversion: 30,
-    agreeableness: 40,
-    neuroticism: 90,
-    teamwork: 30
-  }
-};
+    }
+  },
+
+];
+
+export default candidates;
