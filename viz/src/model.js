@@ -13,31 +13,79 @@ export default {
       speaker: 'Ian',
       text: 'Hello',
       time: 0,
+      stats: {
+        openness: 50,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
     {
       speaker: 'Christian',
       text: 'Hello',
       time: 5,
+      stats: {
+        openness: 90,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
     {
       speaker: 'Ian',
       text: 'Hello',
       time: 12,
+      stats: {
+        openness: 50,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
     {
       speaker: 'Christina',
       text: 'Hello',
       time: 18,
+      stats: {
+        openness: 50,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
     {
       speaker: 'Ian',
       text: 'Hello',
       time: 21,
+      stats: {
+        openness: 50,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
     {
       speaker: 'Christina',
       text: 'Hello',
       time: 28,
+      stats: {
+        openness: 50,
+        conscientiousness: 80,
+        extraversion: 30,
+        agreeableness: 40,
+        neuroticism: 90,
+        teamwork: 30
+      },
     },
   ],
   interviews: [

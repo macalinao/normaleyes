@@ -82,7 +82,7 @@ class App extends Component {
             <div className="App-live">
 
               <h3>Live Sentiment</h3>
-              <Sentiment state={findState(model.states, this.state.currentTime)} />
+              <Sentiment event={model.events[this.state.currentEvent]} />
 
               <h3>Transcript</h3>
               <Transcript events={model.events} currentEvent={this.state.currentEvent} />
