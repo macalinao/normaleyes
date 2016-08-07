@@ -20,7 +20,7 @@ const interviews = [
 export default () => (
   <div className="Sidebar">
     <div id="logoContainer">
-      <img id="logo" src="./images/logo.png" />
+      <img id="logo" src="./images/logo.png" alt="Logo" />
     </div>
     <h2>Candidate Interviews</h2>
     <ul>

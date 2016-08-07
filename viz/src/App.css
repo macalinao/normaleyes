@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   display: flex;
   height: 100%;
 }
@@ -23,4 +22,50 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App-container {
+  flex: 1;
+  padding: 0px 30px;
+}
+
+.App-containerContents {
+  display: flex;
+}
+
+.App-main {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.App-live {
+  width: 400px;
+}
+
+.InterviewHeader {
+  width: 100%;
+  display: flex;
+  margin: 15px 0px;
+}
+
+.InterviewHeader img {
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.InterviewHeader h1 {
+  margin: 0px;
+  margin-bottom: 5px;
+  color: #433f4a;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.InterviewHeader h2 {
+  margin: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #706a7c;
 }
