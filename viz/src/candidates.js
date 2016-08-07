@@ -446,6 +446,7 @@ const candidates = [
       img: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.0.320.320/p320x320/993583_1263332900361874_5964928280633604850_n.jpg?oh=aa485ae9a4732065e1cd632d1a823266&oe=5823DAF9',
       video: 'outputStephanie.mp4',
       reimbursement: '$90.00',
+      link: "http://3ae00a99.ngrok.io/stephanie"
     },
   },
 
@@ -474,7 +475,8 @@ const candidates = [
       email: 'christina@huang.me',
       img: 'https://scontent-sjc2-1.xx.fbcdn.net/t31.0-1/c310.288.506.506/s320x320/12640447_10153966061824456_2299979010115510151_o.jpg',
       video: 'outputChristina.mp4',
-      reimbursement: '$70.00'
+      reimbursement: '$70.00',
+      link: "http://3ae00a99.ngrok.io/christina"
     },
   },
 

@@ -75,8 +75,15 @@ class App extends Component {
     })
   }
 
-  onMoneySent() {
+  onMoneySent(c) {
+    fetch(c.interviewee.link,
+    {
+      method: "POST",
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(){})
     alert("Money Sent!");
+
   }
 
   render() {
@@ -120,7 +127,7 @@ class App extends Component {
 
                   <h3>Reimbursement</h3>
                   <p>Amount Requested: { c.interviewee.reimbursement }</p>
-                  <button className="Button-reimburse" onClick = {() => this.onMoneySent()}>Fulfill via CapitalOne</button>
+                  <button className="Button-reimburse" onClick = {() => this.onMoneySent(c)}>Fulfill via CapitalOne</button>
                   <img className="Logo" src="https://media.cofstatic.com/assets/rwd/img/logo/option-2-btn.png" />
 
                 </div>
