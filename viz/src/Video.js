@@ -18,7 +18,7 @@ class Video extends Component {
     return (
       <div>
         <video id="theVideo" className="Video" controls>
-          <source src="./video/toystory.mp4" type="video/mp4" />
+          <source src="./video/outputStephanie.mp4" type="video/mp4" />
         </video>
       </div>
     );
