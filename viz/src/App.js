@@ -4,8 +4,13 @@ import Sidebar from './Sidebar';
 import Transcript from './Transcript';
 import Video from './Video';
 import InterviewRadar from './InterviewRadar';
+import Sentiment from './Sentiment';
 
 import model from './model';
+
+const findState = (states, time) => {
+  return {};
+};
 
 const InterviewHeader = ({ interviewee }) => (
   <div className="InterviewHeader">
@@ -18,6 +23,12 @@ const InterviewHeader = ({ interviewee }) => (
 )
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="App">
@@ -56,9 +67,17 @@ class App extends Component {
               </div>
 
             </div>
+
             <div className="App-live">
+
+              <h3>Live Sentiment</h3>
+              <Sentiment state={findState(model.states, this.state.currentTime)} />
+
+              <h3>Transcript</h3>
               <Transcript events={model.events} />
+
             </div>
+
           </div>
         </div>
       </div>
