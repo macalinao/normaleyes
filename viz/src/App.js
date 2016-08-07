@@ -9,7 +9,7 @@ import Sentiment from './Sentiment';
 import model from './model';
 
 const getEvent = (events, time) => {
-  return events.findIndex((e) => e.time >= time) - 1;
+  return events.length - 1 - events.slice().reverse().findIndex((e) => time >= e.time);
 };
 
 const findState = (states, time) => {
