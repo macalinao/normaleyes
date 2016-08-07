@@ -18,7 +18,7 @@ const findState = (states, time) => {
 
 const InterviewHeader = ({ interviewee }) => (
   <div className="InterviewHeader">
-    <img src="./images/avatar.jpeg" alt="avatar" />
+    <img src={interviewee.img} alt="avatar" />
     <div>
       <h1>{ interviewee.name }</h1>
       <h2>{ interviewee.role }</h2>
@@ -62,20 +62,27 @@ class App extends Component {
     return candidates[candidateId].interviews[interviewId];
   }
 
+  onCandidateSelect(c) {
+    if (c !== 0 && c !== 1) return;
+    this.setState({
+      candidateId: c
+    });
+  }
+
   render() {
     const c = this.currentCandidate();
     const i = this.currentInterview();
 
     return (
       <div className="App">
-        <Sidebar interviews={c.interviews} candidates={candidates} />
+        <Sidebar interviews={c.interviews} candidates={candidates} onCandidateSelect={this.onCandidateSelect.bind(this)} />
 
         <div className="App-container">
           <InterviewHeader interviewee={c.interviewee} />
 
           <div className="App-containerContents">
             <div className="App-main">
-              <Video onSeek={this.onSeek.bind(this)} />
+              <Video onSeek={this.onSeek.bind(this)} fileName={c.interviewee.video} />
 
               <div className="App-details">
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import './Sidebar.css';
 
-export default ({ interviews, candidates }) => (
+export default ({ interviews, candidates, onCandidateSelect }) => (
   <div className="Sidebar">
     <div id="logoContainer">
       <img id="logo" src="./images/logo.png" alt="Logo" />
     </div>
 
-    <h2>Candidate Interviews</h2>
+    <h2>Interviews</h2>
     <ul>
       {
         interviews.map((interview) =>
@@ -18,11 +18,11 @@ export default ({ interviews, candidates }) => (
       }
     </ul>
 
-    <h2>Related Candidates</h2>
+    <h2>Candidates</h2>
     <ul>
       {
-        candidates.map(x => x.interviewee).map((candidate) =>
-          <li>
+        candidates.map(x => x.interviewee).map((candidate, index) =>
+          <li className={ candidate.selected && 'selected' } onClick={() => onCandidateSelect(index)}>
             <h3>{ candidate.name }</h3>
             <h4>{ candidate.role }</h4>
           </li>)

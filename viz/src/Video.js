@@ -1,11 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import './Video.css';
 
 class Video extends Component {
-
-  static propTypes = {
-    onSeek: PropTypes.func.isRequired
-  }
 
   componentDidMount() {
     const el = document.getElementById('theVideo');
@@ -15,10 +11,10 @@ class Video extends Component {
   }
 
   render() {
+    const { fileName } = this.props;
     return (
       <div>
-        <video id="theVideo" className="Video" controls>
-          <source src="./video/outputStephanie.mp4" type="video/mp4" />
+        <video id="theVideo" className="Video" src={'./video/' + fileName} controls>
         </video>
       </div>
     );
