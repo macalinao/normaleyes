@@ -13,7 +13,7 @@ export default ({ interviews, candidates, onCandidateSelect }) => (
         interviews.map((interview) =>
           <li className={ interview.selected && 'selected' }>
             <h3>{ interview.type }</h3>
-            <h4>{ interview.interviewer }</h4>
+            <h4>By: { interview.interviewer }</h4>
           </li>)
       }
     </ul>
