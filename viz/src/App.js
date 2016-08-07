@@ -8,6 +8,9 @@ import Sentiment from './Sentiment';
 
 import model from './model';
 
+const onSeek = (e) => {
+};
+
 const findState = (states, time) => {
   return {};
 };
@@ -37,7 +40,7 @@ class App extends Component {
           <InterviewHeader interviewee={model.interviewee} />
           <div className="App-containerContents">
             <div className="App-main">
-              <Video />
+              <Video onSeek={onSeek} />
 
               <div className="App-details">
                 <div className="App-radar">
