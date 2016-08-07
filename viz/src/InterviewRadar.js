@@ -1,6 +1,13 @@
 import React from 'react';
 import { Radar } from 'react-pathjs-chart';
 
+const fixStats = (stats) => {
+  return Object.keys(stats).reduce((acc, el) => {
+    acc[el] = stats[el] * 100;
+    return acc;
+  }, {});
+};
+
 const options = {
   width: 300,
   height: 300,
@@ -27,5 +34,5 @@ const options = {
 };
 
 export default ({ overallStats }) => (
-    <Radar data={[overallStats]} options={options} />
+    <Radar data={[fixStats(overallStats)]} options={options} />
 );
