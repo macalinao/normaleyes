@@ -4,7 +4,7 @@ import { Bar } from 'react-pathjs-chart';
 const adaptEventStatsToBar = (eventStats) => {
   return Object.keys(eventStats).map((key) => [{
     name: key,
-    v: eventStats[key],
+    v: eventStats[key] || 1,
   }]);
 };
 
