@@ -40,6 +40,13 @@ class App extends Component {
     });
   }
 
+  onTranscriptSelect(index) {
+    const el = document.getElementById('theVideo');
+    if (el) {
+      el.currentTime = model.events[index].time;
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -85,7 +92,7 @@ class App extends Component {
               <Sentiment event={model.events[this.state.currentEvent]} />
 
               <h3>Transcript</h3>
-              <Transcript events={model.events} currentEvent={this.state.currentEvent} />
+              <Transcript events={model.events} currentEvent={this.state.currentEvent} onTranscriptSelect={this.onTranscriptSelect.bind(this)} />
 
             </div>
 
