@@ -1,7 +1,12 @@
 export default {
+  interviewer: {
+    name: 'Christina Huang'
+  },
   interviewee: {
     name: 'Ian Macalinao',
-    role: 'Software Engineering Candidate'
+    role: 'Software Engineering Candidate',
+    phone: '(530) 426-2146',
+    email: 'me@ian.pw'
   },
   events: [
     {
@@ -58,4 +63,12 @@ export default {
       role: 'Peace Warrior',
     },
   ],
+  stats: {
+    openness: 50,
+    conscientiousness: 80,
+    extraversion: 30,
+    agreeableness: 40,
+    neuroticism: 90,
+    teamwork: 30
+  }
 };

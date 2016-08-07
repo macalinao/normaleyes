@@ -3,6 +3,7 @@ import './App.css';
 import Sidebar from './Sidebar';
 import Transcript from './Transcript';
 import Video from './Video';
+import InterviewRadar from './InterviewRadar';
 
 import model from './model';
 
@@ -26,6 +27,34 @@ class App extends Component {
           <div className="App-containerContents">
             <div className="App-main">
               <Video />
+
+              <div className="App-details">
+                <div className="App-radar">
+                  <h3>Overall Attributes</h3>
+                  <InterviewRadar overallStats={model.stats} />
+                </div>
+                <div className="App-info">
+
+                  <h3>Info</h3>
+                  <ul>
+                    <li><strong>Name: </strong>{ model.interviewee.name }</li>
+                    <li><strong>Email: </strong>{ model.interviewee.email }</li>
+                    <li><strong>Phone: </strong>{ model.interviewee.phone }</li>
+                    <li><strong>Interviewed By: </strong>{ model.interviewer.name }</li>
+                  </ul>
+
+                  <h3>Hiring Decision</h3>
+                  <button>Approve</button>
+                  <button>Reject</button>
+
+                  <h3>Fulfill Reimbursement</h3>
+                  <p>Account number: <input type="text" /></p>
+                  <p>Routing number: <input type="text" /></p>
+                  <button>Send via CapitalOne</button>
+
+                </div>
+              </div>
+
             </div>
             <div className="App-live">
               <Transcript events={model.events} />
