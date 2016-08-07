@@ -1,0 +1,14 @@
+A: So tell me about yourself. Why do you want this job?
+B: I am a Computer Science major and am going to be a junior. I feel like I've always stood out because of my ability to solve difficult problems and in particular, solving programming problems. I have taken the hardest classes at school and people always come to me when they are stuck. I'm good at understanding people when they have questions and don't understand, and I respond in a way that is to the point. I haven't been challenged at my past jobs, and just need a change.
+A: What has been your prior experience with working on teams?
+B: On a team, I usually take a leadership position and guide the team in the right direction. My teammates generally turn to me for technical expertise and I enjoy helping them. I'm very quick with my own assignments so I have time to help others and seek out more responsibilities.
+A: Tell me about a challenge you've faced, and how you overcame it.
+B: On my last team, our project did not turn out well. Although I fulfilled my own responsibilities ahead of time, many of my other teammates failed to reach the milestones we had agreed upon months in advance. They lacked coordination and inspiration, and thus we were way behind schedule leading up to the final product launch. I ended up having to take on their responsibilities in addition to my own. If I hadn't done this, the project would have been a complete failure!
+A: What is one accomplishment you're most proud of?
+B: During a Hackathon that I participated in freshman year, there was a coding competition that involved solving puzzles as quickly as possible. Although most people worked in teams of two to four, I decided to work by myself for an added challenge. I ended up getting second place out of fifty teams, and the team that had beaten me was a group of four seniors. Obviously, I was happy with my performance, especially because I knew this meant that I was better than my coworkers.
+A: What are your strengths and weaknesses?
+B: My weaknesses are that I'm a perfectionist and I'm too focused on details and sometimes can't see the bigger picture. Sometimes it gets in the way of my progress. I think this weakness is also a strength because I am efficient.
+A: What are your top three priorities in choosing a place to work at?
+B: I look for challenging work to keep me mentally stimulated and I think it's important that my coworkers aren't lazy. I also look at potential for growth within a company and a fast-paced environment.
+A: Do you have any questions?
+B: I don't have any questions right now. I already know a lot of people in the company and I've talked to them before about the environment. 
