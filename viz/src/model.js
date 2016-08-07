@@ -12,26 +12,32 @@ export default {
     {
       speaker: 'Ian',
       text: 'Hello',
+      time: 0,
     },
     {
       speaker: 'Christian',
       text: 'Hello',
+      time: 5,
     },
     {
       speaker: 'Ian',
       text: 'Hello',
+      time: 12,
     },
     {
       speaker: 'Christina',
       text: 'Hello',
+      time: 18,
     },
     {
       speaker: 'Ian',
       text: 'Hello',
+      time: 21,
     },
     {
       speaker: 'Christina',
       text: 'Hello',
+      time: 28,
     },
   ],
   interviews: [

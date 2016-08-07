@@ -8,7 +8,8 @@ import Sentiment from './Sentiment';
 
 import model from './model';
 
-const onSeek = (e) => {
+const getEvent = (events, time) => {
+  return events.findIndex((e) => e.time >= time) - 1;
 };
 
 const findState = (states, time) => {
@@ -32,6 +33,13 @@ class App extends Component {
     this.state = {};
   }
 
+  onSeek(time) {
+    const ev = getEvent(model.events, time);
+    this.setState({
+      currentEvent: ev,
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -40,7 +48,7 @@ class App extends Component {
           <InterviewHeader interviewee={model.interviewee} />
           <div className="App-containerContents">
             <div className="App-main">
-              <Video onSeek={onSeek} />
+              <Video onSeek={this.onSeek.bind(this)} />
 
               <div className="App-details">
                 <div className="App-radar">
@@ -77,7 +85,7 @@ class App extends Component {
               <Sentiment state={findState(model.states, this.state.currentTime)} />
 
               <h3>Transcript</h3>
-              <Transcript events={model.events} />
+              <Transcript events={model.events} currentEvent={this.state.currentEvent} />
 
             </div>
 
