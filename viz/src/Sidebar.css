@@ -1,0 +1,54 @@
+.Sidebar {
+  width: 230px;
+  background-color: #2e3c54;
+  color: #A2B4BC;
+  text-align: left;
+}
+
+.Sidebar #logoContainer {
+  padding: 10px;
+}
+
+.Sidebar #logo {
+  width: 100%;
+}
+
+.Sidebar h2 {
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+}
+
+.Sidebar ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.Sidebar li {
+  padding: 15px 10px;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.Sidebar li.selected {
+  border-left: 3px solid #ffb900;
+  color: #fff;
+}
+
+.Sidebar li:hover {
+  background-color: #179DBA;
+  color: #fff;
+}
+
+.Sidebar li h3 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.Sidebar li h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
