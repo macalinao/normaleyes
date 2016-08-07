@@ -406,7 +406,7 @@ const christinaStats = {
   extraversion: 0.29,
   agreeableness: 0.82,
   neuroticism: 0.96,
-  team: 0.15
+  team: 0.58
 };
 
 const stephanieStats = {
@@ -415,7 +415,7 @@ const stephanieStats = {
   extraversion: 0.70,
   agreeableness: 0.91,
   neuroticism: 0.94,
-  team: 0.44
+  team: 0.72
 };
 
 const candidates = [
