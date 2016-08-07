@@ -13,7 +13,7 @@ const options = {
   height: 200,
   margin: {
     top: 0,
-    left: 0,
+    left: 30,
     bottom: 70,
     right: 0
   },
