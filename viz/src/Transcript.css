@@ -6,3 +6,12 @@
   height: 400px;
   overflow-y: scroll;
 }
+
+.Transcript ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.Transcript li {
+  margin-bottom: 10px;
+}
