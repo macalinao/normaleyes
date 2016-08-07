@@ -69,6 +69,16 @@ class App extends Component {
     });
   }
 
+  onButtonClick(name) {
+    this.setState({
+      buttonState: name
+    })
+  }
+
+  onMoneySent() {
+    alert("Money Sent!");
+  }
+
   render() {
     const c = this.currentCandidate();
     const i = this.currentInterview();
@@ -102,13 +112,16 @@ class App extends Component {
                   </ul>
 
                   <h3>Hiring Decision</h3>
-                  <button>Approve</button>
-                  <button>Reject</button>
+                  <button className={this.state.buttonState==='approve' && "Button-approve-clicked"}
+                  onClick={() => this.onButtonClick('approve')}>Approve</button>
 
-                  <h3>Fulfill Reimbursement</h3>
-                  <p>Account number: <input type="text" /></p>
-                  <p>Routing number: <input type="text" /></p>
-                  <button>Send via CapitalOne</button>
+                  <button className={this.state.buttonState==='reject' && "Button-reject-clicked"}
+                  onClick={() => this.onButtonClick('reject')}>Reject</button>
+
+                  <h3>Reimbursement</h3>
+                  <p>Amount Requested: { c.interviewee.reimbursement }</p>
+                  <button className="Button-reimburse" onClick = {() => this.onMoneySent()}>Fulfill via CapitalOne</button>
+                  <img className="Logo" src="https://media.cofstatic.com/assets/rwd/img/logo/option-2-btn.png" />
 
                 </div>
               </div>

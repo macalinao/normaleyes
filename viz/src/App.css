@@ -15,6 +15,10 @@
   color: white;
 }
 
+.App-info button {
+  width: 90px;
+  margin-right: 10px;
+}
 .App-intro {
   font-size: large;
 }
@@ -40,6 +44,28 @@
 
 .App-live {
   width: 400px;
+}
+
+.Button-approve-clicked {
+  background-color: #57de22;
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+}
+
+.Button-reimburse {
+  background-color: #003A6F;
+  border-radius: 3px;
+  border:none;
+  padding: 3px;
+  color: white;
+  float: right;
+}
+.Button-reject-clicked {
+  background-color: #c73030;
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
 }
 
 .InterviewHeader {
@@ -70,6 +96,9 @@
   color: #706a7c;
 }
 
+.Logo {
+  width: 170px;
+}
 .App-details {
   display: flex;
 }
